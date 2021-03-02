@@ -1,0 +1,9 @@
+{
+  "name": "reaktor-internship-deployment",
+  "version": "1.0.0",
+  "description": "An Express server to deploy the app to Heroku",
+  "main": "index.js",
+  "author": "SonTrungTo <son.trung.to@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
