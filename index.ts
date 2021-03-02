@@ -1,13 +1,16 @@
 const express = require("express");
 const cors = require("cors");
-const proxy = require("http-proxy-middleware");
+const { createProxyMiddleware } = require("http-proxy-middleware");
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static("build"));
 
-app.use("/",)
+app.use("/", createProxyMiddleware({
+    target: "https://bad-api-assignment.reaktor.com",
+    changeOrigin: true
+}));
 
 const unknownEndPoint = (_, res) => {
     return res.status(404).json({
